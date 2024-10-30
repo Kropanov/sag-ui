@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'primeng/resources/themes/arya-purple/theme.css';
+@import 'primeng/resources/primeng.css';
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    font-size: 100%;
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
