@@ -1,0 +1,25 @@
+<p-menu #menu [model]="menuItems" [popup]="true" styleClass="w-full md:w-15rem">
+    <ng-template pTemplate="start"> </ng-template>
+    <ng-template pTemplate="submenuheader" let-item>
+        <span class="text-primary font-bold">{{ item.label }}</span>
+    </ng-template>
+    <ng-template pTemplate="item" let-item>
+        <app-user-menu-item [item]="item" />
+    </ng-template>
+    <ng-template pTemplate="end">
+        <button
+            pRipple
+            class="relative overflow-hidden w-full p-link flex align-items-center p-2 pl-3 text-color hover:surface-200 border-noround"
+        >
+            <p-avatar
+                image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+                class="mr-2"
+                shape="circle"
+            />
+            <span class="inline-flex flex-column">
+                <span class="font-bold">Amy Elsner</span>
+                <span class="text-sm">Admin</span>
+            </span>
+        </button>
+    </ng-template>
+</p-menu>

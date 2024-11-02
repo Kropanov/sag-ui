@@ -1,0 +1,18 @@
+<p-menubar class="app-bar" [model]="items" [style]="{ 'border-radius': '3rem' }">
+    <ng-template pTemplate="start"></ng-template>
+    <ng-template pTemplate="item" let-item let-root="root">
+        <app-menu-item [item]="item" [root]="root"></app-menu-item>
+    </ng-template>
+    <ng-template pTemplate="end">
+        <div class="flex align-items-center gap-2">
+            <input type="text" pInputText placeholder="Search" class="w-8rem sm:w-auto" />
+            <app-user-menu />
+            <p-avatar
+                (click)="toggleUserMenu($event)"
+                class="mt-2 ml-1 mr-1"
+                image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png"
+                shape="circle"
+            />
+        </div>
+    </ng-template>
+</p-menubar>
