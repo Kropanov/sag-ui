@@ -15,11 +15,11 @@ import { UserMenuItemComponent } from './user-menu-item/user-menu-item.component
     styleUrl: './user-menu.component.scss',
 })
 export class UserMenuComponent implements OnInit {
-    menuItems: MenuItem[] | undefined;
+    items: MenuItem[] | undefined;
     menu = viewChild<Menu>('menu');
 
     ngOnInit(): void {
-        this.menuItems = [
+        this.items = [
             {
                 separator: true,
             },
